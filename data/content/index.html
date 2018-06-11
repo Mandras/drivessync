@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<title>DrivesSync</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>DrivesSync <span>v0.2</span></h1>
+	<div id="content">
+
+		<div class="clearfix">
+
+			<div id="dest-extra" class="checkbox" data-checked="0"></div>
+			<span class="label" onclick="$('#dest-extra').click();">Delete extra destination files</span>
+
+			<a href="#" id="refresh" class="button" onclick="get_drives();">Refresh drives list</a>		
+		</div>
+
+		<br />
+
+		<label for="source">Source</label>
+		<select name="source" id="source"></select>
+		<br />
+		<br />
+		<label for="destination">Destination</label>
+		<select name="destination" id="destination"></select>
+		<br />
+		<br />
+		<br />
+		<button onclick="sync();">Sync !</button>
+		<br />
+	</div>
+	<div id="output">
+		<span class="normal"><b>Synchronisation output</b><br /></span>
+	</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/app.js"></script>
+</html>
